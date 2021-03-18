@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 18:51:54 by chahan            #+#    #+#             */
-/*   Updated: 2021/02/25 18:59:15 by chahan           ###   ########.fr       */
+/*   Created: 2021/02/25 19:53:42 by chahan            #+#    #+#             */
+/*   Updated: 2021/03/09 13:39:34 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_factorial(int nb)
+int		ft_fibonacci(int index)
 {
-	unsigned int	ans;
-	int				i;
-
-	ans = 1;
-	i = 1;
-	if (nb < 0)
+	if (index < 0)
+		return (-1);
+	if (index == 0)
 		return (0);
-	if (nb == 0)
+	if (index == 1)
 		return (1);
-	while (i <= nb)
-		ans *= (i++);
-	return (ans);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }

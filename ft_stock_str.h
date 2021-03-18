@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 18:51:54 by chahan            #+#    #+#             */
-/*   Updated: 2021/02/25 18:59:15 by chahan           ###   ########.fr       */
+/*   Created: 2021/03/18 00:06:50 by chahan            #+#    #+#             */
+/*   Updated: 2021/03/18 00:08:55 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_factorial(int nb)
-{
-	unsigned int	ans;
-	int				i;
+#ifndef FT_STOCK_STR_H
+# define FT_STOCK_STR_H
 
-	ans = 1;
-	i = 1;
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	while (i <= nb)
-		ans *= (i++);
-	return (ans);
-}
+typedef struct	s_stock_str
+{
+	int		size;
+	char	*str;
+	char	*copy;
+}				t_stock_str;
+
+#endif
